@@ -45,6 +45,9 @@ class ImageFetcherOperation: Operation {
     }
     
     override func cancel() {
+        if isFinished {
+            return
+        }
         self.stateStore = .cancelled
         print("Download cancelled \(identifier)")
     }

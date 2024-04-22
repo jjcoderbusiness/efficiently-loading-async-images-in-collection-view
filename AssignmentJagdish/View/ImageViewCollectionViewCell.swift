@@ -54,7 +54,6 @@ class ImageViewCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         isImageSet = false
-        print("Cell Reused")
     }
     
     func loadImage() {
